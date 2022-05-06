@@ -1,6 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "leonidasabout.h"
 #include <QMainWindow>
 
 
@@ -18,10 +19,10 @@ public:
 
 
 private:
+    LeonidasAbout *lAbout;
     Ui::MainWindow *ui;
     QToolBar *toolBar;
     void setMainToolBar();
-
     private slots:
       void openFile();
       void closeFile();

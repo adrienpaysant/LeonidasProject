@@ -4,6 +4,7 @@
 #include <QIcon>
 #include <QAction>
 #include <QHBoxLayout>
+#include <QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -21,10 +22,11 @@ void MainWindow:: setMainToolBar(){
     QPixmap openpix(":/ressources/icon/open.png");
     QPixmap closepix(":/ressources/icon/close.png");
     QPixmap aboutpix(":/ressources/icon/info.png");
-  //  QPixmap quitpix(":/ressources/icon/quit.png");
+    //  QPixmap quitpix(":/ressources/icon/quit.png");
 
     toolBar = new QToolBar("Tool Bar");
     toolBar->setFloatable(false);
+    toolBar->setMovable(false);
     this->addToolBar(toolBar);
 
     //tool to center the icons on the toolbar
@@ -45,18 +47,23 @@ void MainWindow:: setMainToolBar(){
     toolBar->addSeparator();
     QAction *aboutAction= toolBar->addAction(QIcon(aboutpix),"About");
     toolBar->addWidget(dummyBoy2);
-  //  QAction *quitAction= toolBar->addAction(QIcon(quitpix),"Leave App");
+    //  QAction *quitAction= toolBar->addAction(QIcon(quitpix),"Leave App");
 
     //signals management
     connect(openAction, &QAction::triggered, this, &MainWindow :: openFile);
     connect(closeAction, &QAction::triggered, this,&MainWindow :: closeFile);
     connect(aboutAction, &QAction::triggered, this,&MainWindow :: about);
- //   connect(quitAction, &QAction::triggered, this, &QApplication::quit);
+    //   connect(quitAction, &QAction::triggered, this, &QApplication::quit);
 }
 
-//signal implem
+//signals implem
+
+//About message box
 void MainWindow::about(){
-    //TODO
+        QMessageBox msgBox;
+        msgBox.setWindowTitle("About Leonidas");
+        msgBox.setText("Project made for RI50 Course at UTBM. \nMade by \n Jules LAMY\n Théo BEDEZ\n Feiyang YIN\n Yu Xiang LI\n Adrien PAYSANT.");
+        msgBox.exec();
 }
 void MainWindow::openFile(){
     //TODO
