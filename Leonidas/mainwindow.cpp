@@ -21,7 +21,7 @@ void MainWindow:: setMainToolBar(){
     QPixmap openpix(":/ressources/icon/open.png");
     QPixmap closepix(":/ressources/icon/close.png");
     QPixmap aboutpix(":/ressources/icon/info.png");
-    QPixmap quitpix(":/ressources/icon/quit.png");
+  //  QPixmap quitpix(":/ressources/icon/quit.png");
 
     toolBar = new QToolBar("Tool Bar");
     toolBar->setFloatable(false);
@@ -45,14 +45,13 @@ void MainWindow:: setMainToolBar(){
     toolBar->addSeparator();
     QAction *aboutAction= toolBar->addAction(QIcon(aboutpix),"About");
     toolBar->addWidget(dummyBoy2);
-    QAction *quitAction= toolBar->addAction(QIcon(quitpix),"Leave App");
-//    toolBar->addWidget(dummyBoy3);
+  //  QAction *quitAction= toolBar->addAction(QIcon(quitpix),"Leave App");
 
     //signals management
     connect(openAction, &QAction::triggered, this, &MainWindow :: openFile);
     connect(closeAction, &QAction::triggered, this,&MainWindow :: closeFile);
     connect(aboutAction, &QAction::triggered, this,&MainWindow :: about);
-    connect(quitAction, &QAction::triggered, this, &QApplication::quit);
+ //   connect(quitAction, &QAction::triggered, this, &QApplication::quit);
 }
 
 //signal implem
