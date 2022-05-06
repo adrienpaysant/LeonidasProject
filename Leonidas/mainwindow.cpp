@@ -3,6 +3,7 @@
 #include <QToolBar>
 #include <QIcon>
 #include <QAction>
+#include <QHBoxLayout>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -17,21 +18,35 @@ MainWindow::MainWindow(QWidget *parent)
 void MainWindow:: setMainToolBar(){
 
     //pixmap to enhance the toolbar
-    QPixmap openpix("");
-    QPixmap closepix("");
-    QPixmap aboutpix("");
-    QPixmap quitpix("");
+    QPixmap openpix(":/ressources/icon/open.png");
+    QPixmap closepix(":/ressources/icon/close.png");
+    QPixmap aboutpix(":/ressources/icon/info.png");
+    QPixmap quitpix(":/ressources/icon/quit.png");
 
-    toolBar = addToolBar("Tool Bar");
-    toolBar->addSeparator();
+    toolBar = new QToolBar("Tool Bar");
     toolBar->setFloatable(false);
+    this->addToolBar(toolBar);
+
+    //tool to center the icons on the toolbar
+    auto dummyBoy1 = new QWidget(this);
+    dummyBoy1->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+    auto dummyBoy2 = new QWidget(this);
+    dummyBoy2->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
+
 
 
     //Action management
+    toolBar->addWidget(dummyBoy1);
+
+
     QAction *openAction= toolBar->addAction(QIcon(openpix),"Open File");
+    toolBar->addSeparator();
     QAction *closeAction= toolBar->addAction(QIcon(closepix),"Close File");
+    toolBar->addSeparator();
     QAction *aboutAction= toolBar->addAction(QIcon(aboutpix),"About");
+    toolBar->addWidget(dummyBoy2);
     QAction *quitAction= toolBar->addAction(QIcon(quitpix),"Leave App");
+//    toolBar->addWidget(dummyBoy3);
 
     //signals management
     connect(openAction, &QAction::triggered, this, &MainWindow :: openFile);
