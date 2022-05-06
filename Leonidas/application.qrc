@@ -1,5 +1,9 @@
 <RCC>
     <qresource prefix="/">
         <file>ressources/logo_leonidas/leonidas_logo.png</file>
+        <file>ressources/icon/close.png</file>
+        <file>ressources/icon/info.png</file>
+        <file>ressources/icon/open.png</file>
+        <file>ressources/icon/quit.png</file>
     </qresource>
 </RCC>
