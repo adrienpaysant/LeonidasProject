@@ -23,10 +23,10 @@ private:
     Ui::MainWindow *ui;
     QToolBar *toolBar;
     void setMainToolBar();
-    private slots:
-      void openFile();
-      void closeFile();
-      void about();
+private slots:
+    void openFile();
+    void closeFile();
+    void about();
 
 };
 #endif // MAINWINDOW_H

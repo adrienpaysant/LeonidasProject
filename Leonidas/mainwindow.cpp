@@ -58,18 +58,18 @@ void MainWindow:: setMainToolBar(){
 
 //signals implem
 
+void MainWindow::openFile(){
+    //TODO
+}
+void MainWindow::closeFile(){
+    //TODO
+}
 //About message box
 void MainWindow::about(){
         QMessageBox msgBox;
         msgBox.setWindowTitle("About Leonidas");
         msgBox.setText("Project made for RI50 Course at UTBM. \nMade by \n Jules LAMY\n Théo BEDEZ\n Feiyang YIN\n Yu Xiang LI\n Adrien PAYSANT.");
         msgBox.exec();
-}
-void MainWindow::openFile(){
-    //TODO
-}
-void MainWindow::closeFile(){
-    //TODO
 }
 
 
