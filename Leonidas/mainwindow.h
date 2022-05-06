@@ -20,6 +20,7 @@ public:
 private:
     Ui::MainWindow *ui;
     QToolBar *toolBar;
+    void setToolBar();
 
     private slots:
       void openFile();

@@ -10,9 +10,13 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     this->setWindowTitle("Leonidas Project");
+    this->setMainToolBar();
 
+}
 
-    //ToolBar
+void MainWindow:: setMainToolBar(){
+
+    //pixmap to enhance the toolbar
     QPixmap openpix("");
     QPixmap closepix("");
     QPixmap aboutpix("");
@@ -23,18 +27,17 @@ MainWindow::MainWindow(QWidget *parent)
     toolBar->setFloatable(false);
 
 
-
+    //Action management
     QAction *openAction= toolBar->addAction(QIcon(openpix),"Open File");
     QAction *closeAction= toolBar->addAction(QIcon(closepix),"Close File");
     QAction *aboutAction= toolBar->addAction(QIcon(aboutpix),"About");
     QAction *quitAction= toolBar->addAction(QIcon(quitpix),"Leave App");
 
-
+    //signals management
     connect(openAction, &QAction::triggered, this, &MainWindow :: openFile);
     connect(closeAction, &QAction::triggered, this,&MainWindow :: closeFile);
     connect(aboutAction, &QAction::triggered, this,&MainWindow :: about);
     connect(quitAction, &QAction::triggered, this, &QApplication::quit);
-
 }
 
 //signal implem
