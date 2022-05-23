@@ -14,6 +14,7 @@ public class LeonidasMain
 		java.awt.EventQueue.invokeLater(new Runnable()
 			{
 
+			@Override
 			public void run()
 				{
 				LeonidasFrame frame = new LeonidasFrame();

@@ -536,3 +536,161 @@ Binding(ALT+SHIFT+R,
 
 !ENTRY org.eclipse.m2e.logback.appender 2 0 2022-05-23 11:14:16.671
 !MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.core.net 1 0 2022-05-23 11:19:21.449
+!MESSAGE System property http.proxyHost is not set but should be proxy.he-arc.ch.
+
+!ENTRY org.eclipse.core.net 1 0 2022-05-23 11:19:21.449
+!MESSAGE System property http.proxyPort is not set but should be 8080.
+
+!ENTRY org.eclipse.core.net 1 0 2022-05-23 11:19:21.450
+!MESSAGE System property https.proxyHost is not set but should be proxy.he-arc.ch.
+
+!ENTRY org.eclipse.core.net 1 0 2022-05-23 11:19:21.450
+!MESSAGE System property https.proxyPort is not set but should be 8080.
+
+!ENTRY org.eclipse.core.net 1 0 2022-05-23 11:19:21.451
+!MESSAGE System property socksProxyHost is not set but should be proxy.he-arc.ch.
+
+!ENTRY org.eclipse.core.net 1 0 2022-05-23 11:19:21.451
+!MESSAGE System property socksProxyPort is not set but should be 8080.
+
+!ENTRY org.eclipse.core.net 1 0 2022-05-23 11:23:17.052
+!MESSAGE System property http.proxyHost is not set but should be proxy.he-arc.ch.
+
+!ENTRY org.eclipse.core.net 1 0 2022-05-23 11:23:17.052
+!MESSAGE System property http.proxyPort is not set but should be 8080.
+
+!ENTRY org.eclipse.core.net 1 0 2022-05-23 11:23:17.053
+!MESSAGE System property https.proxyHost is not set but should be proxy.he-arc.ch.
+
+!ENTRY org.eclipse.core.net 1 0 2022-05-23 11:23:17.054
+!MESSAGE System property https.proxyPort is not set but should be 8080.
+
+!ENTRY org.eclipse.core.net 1 0 2022-05-23 11:23:17.054
+!MESSAGE System property socksProxyHost is not set but should be proxy.he-arc.ch.
+
+!ENTRY org.eclipse.core.net 1 0 2022-05-23 11:23:17.055
+!MESSAGE System property socksProxyPort is not set but should be 8080.
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-05-23 11:24:03.869
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-05-23 11:24:03.871
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2022-05-23 11:26:46.807
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 4 10011 2022-05-23 11:26:46.807
+!MESSAGE "Eclipse PDE Source Patch with Java 18 support for 2022-03 development stream" is not applicable to the current configuration and will not be installed.
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 4 10011 2022-05-23 11:26:46.807
+!MESSAGE "Eclipse PDE Patch with Java 18 support for 2022-03 development stream" is not applicable to the current configuration and will not be installed.
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2022-05-23 11:26:46.813
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 4 10011 2022-05-23 11:26:46.813
+!MESSAGE "Eclipse PDE Source Patch with Java 18 support for 2022-03 development stream" is not applicable to the current configuration and will not be installed.
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 4 10011 2022-05-23 11:26:46.813
+!MESSAGE "Eclipse PDE Patch with Java 18 support for 2022-03 development stream" is not applicable to the current configuration and will not be installed.
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2022-05-23 11:26:46.821
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 4 10011 2022-05-23 11:26:46.821
+!MESSAGE "Eclipse PDE Source Patch with Java 18 support for 2022-03 development stream" is not applicable to the current configuration and will not be installed.
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 4 10011 2022-05-23 11:26:46.821
+!MESSAGE "Eclipse PDE Patch with Java 18 support for 2022-03 development stream" is not applicable to the current configuration and will not be installed.
+
+!ENTRY org.eclipse.equinox.p2.operations 4 0 2022-05-23 11:26:46.821
+!MESSAGE Operation details
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 4 10011 2022-05-23 11:26:46.821
+!MESSAGE "Eclipse PDE Source Patch with Java 18 support for 2022-03 development stream" is not applicable to the current configuration and will not be installed.
+!SUBENTRY 1 org.eclipse.equinox.p2.operations 4 10011 2022-05-23 11:26:46.821
+!MESSAGE "Eclipse PDE Patch with Java 18 support for 2022-03 development stream" is not applicable to the current configuration and will not be installed.
+!SESSION 2022-05-23 11:27:30.414 -----------------------------------------------
+eclipse.buildId=4.23.0.I20220308-0310
+java.version=18.0.1
+java.vendor=Eclipse Adoptium
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.java.product -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product -data file:/C:/DEV/RI50/LeonidasProject/WLeonidas/ -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.jface 2 0 2022-05-23 11:27:35.192
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-05-23 11:27:35.193
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@319b1c77,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@584136c1,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2022-05-23 11:27:35.193
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@51d88c38,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@3ea2f72e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-05-23 11:27:40.159
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-05-23 11:27:40.168
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-05-23 11:28:43.630
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-05-23 11:28:43.644
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-05-23 11:29:50.101
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-05-23 11:29:50.105
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-05-23 11:30:14.146
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-05-23 11:30:14.149
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-05-23 11:30:35.466
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-05-23 11:30:35.469
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-05-23 11:31:46.754
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-05-23 11:31:46.758
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-05-23 11:32:18.883
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-05-23 11:32:18.887
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
