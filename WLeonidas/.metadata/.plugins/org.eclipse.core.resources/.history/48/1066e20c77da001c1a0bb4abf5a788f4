@@ -45,7 +45,6 @@ public class JLeonidasFrame extends JFrame
 
 	private void appearance()
 		{
-		setTitle("Leonidas");
 		setSize(600, 400);
 		setLocationRelativeTo(null); // frame centrer
 		setVisible(true); // last!
