@@ -1,2 +1,0 @@
-INDEX VERSION 1.131+C:\DEV\RI50\LeonidasProject\WLeonidas\.metadata\.plugins\org.eclipse.jdt.core
-1865797976.index
