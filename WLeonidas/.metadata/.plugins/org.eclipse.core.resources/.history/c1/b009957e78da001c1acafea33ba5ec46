@@ -16,7 +16,7 @@ public class LeonidasMain
 
 			public void run()
 				{
-				LeonidasFrame frame = new LeonidasFrame();
+				JLeonidasFrame frame = new JLeonidasFrame();
 				frame.setVisible(true);
 				}
 			});

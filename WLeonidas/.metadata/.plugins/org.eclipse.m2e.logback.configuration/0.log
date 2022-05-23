@@ -1302,3 +1302,37 @@ org.eclipse.core.runtime.CoreException: Could not resolve artifact mrj:MRJToolki
 2022-05-23 11:02:19,540 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
 2022-05-23 11:02:19,544 [Worker-3: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
 2022-05-23 11:02:19,545 [Worker-3: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 0 resource
+2022-05-23 11:11:21,644 [Worker-2: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-05-23 11:11:23,213 [Worker-12: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: ri50:leonidas-project:0.0.1-SNAPSHOT @ C:\DEV\RI50\LeonidasProject\WLeonidas\leonidas-project\pom.xml.
+2022-05-23 11:11:23,513 [Worker-12: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-05-23 11:11:23,514 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\DEV\RI50\LeonidasProject\WLeonidas\leonidas-project\src\main\resources
+2022-05-23 11:11:23,518 [Worker-12: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-05-23 11:11:23,519 [Worker-12: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\DEV\RI50\LeonidasProject\WLeonidas\leonidas-project\src\test\resources
+2022-05-23 11:11:47,667 [Worker-15: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-05-23 11:11:47,669 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\DEV\RI50\LeonidasProject\WLeonidas\leonidas-project\src\main\resources
+2022-05-23 11:11:47,672 [Worker-15: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-05-23 11:11:47,676 [Worker-15: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\DEV\RI50\LeonidasProject\WLeonidas\leonidas-project\src\test\resources
+2022-05-23 11:11:58,390 [Worker-5: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-05-23 11:11:58,391 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\DEV\RI50\LeonidasProject\WLeonidas\leonidas-project\src\main\resources
+2022-05-23 11:11:58,393 [Worker-5: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-05-23 11:11:58,394 [Worker-5: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\DEV\RI50\LeonidasProject\WLeonidas\leonidas-project\src\test\resources
+2022-05-23 11:12:08,807 [Worker-18: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-05-23 11:12:08,808 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\DEV\RI50\LeonidasProject\WLeonidas\leonidas-project\src\main\resources
+2022-05-23 11:12:08,809 [Worker-18: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-05-23 11:12:08,810 [Worker-18: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\DEV\RI50\LeonidasProject\WLeonidas\leonidas-project\src\test\resources
+2022-05-23 11:12:14,901 [Worker-17: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-05-23 11:12:14,905 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\DEV\RI50\LeonidasProject\WLeonidas\leonidas-project\src\main\resources
+2022-05-23 11:12:14,907 [Worker-17: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-05-23 11:12:14,909 [Worker-17: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\DEV\RI50\LeonidasProject\WLeonidas\leonidas-project\src\test\resources
+2022-05-23 11:12:26,769 [Worker-9: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-05-23 11:12:26,770 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\DEV\RI50\LeonidasProject\WLeonidas\leonidas-project\src\main\resources
+2022-05-23 11:12:26,773 [Worker-9: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-05-23 11:12:26,774 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\DEV\RI50\LeonidasProject\WLeonidas\leonidas-project\src\test\resources
+2022-05-23 11:12:33,087 [Worker-4: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-05-23 11:12:33,088 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\DEV\RI50\LeonidasProject\WLeonidas\leonidas-project\src\main\resources
+2022-05-23 11:12:33,089 [Worker-4: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-05-23 11:12:33,091 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\DEV\RI50\LeonidasProject\WLeonidas\leonidas-project\src\test\resources
+2022-05-23 11:12:39,747 [Worker-9: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-05-23 11:12:39,748 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\DEV\RI50\LeonidasProject\WLeonidas\leonidas-project\src\main\resources
+2022-05-23 11:12:39,749 [Worker-9: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-05-23 11:12:39,750 [Worker-9: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\DEV\RI50\LeonidasProject\WLeonidas\leonidas-project\src\test\resources
