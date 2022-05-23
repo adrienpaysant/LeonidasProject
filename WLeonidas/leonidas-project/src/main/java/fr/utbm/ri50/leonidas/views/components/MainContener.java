@@ -4,7 +4,8 @@ import javax.swing.Box;
 import javax.swing.BoxLayout;
 import javax.swing.JLabel;
 
-import fr.utbm.ri50.leonidas.tools.layout.JCenterV;
+import fr.utbm.ri50.leonidas.tools.layout.JCenter;
+import fr.utbm.ri50.leonidas.tools.layout.JCenterH;
 
 public class MainContener extends Box
 	{
@@ -17,7 +18,11 @@ public class MainContener extends Box
 		{
 
 		super(BoxLayout.Y_AXIS);
-		add(new JCenterV( new JLabel("toto")));//TODO TO REMOVE
+		add(new JCenterH(new JLabel("toolbar")));
+//		add((new JCenterH( new JLabel("dummy placeholder H-centered"))));//TODO TO REMOVE
+//		add((new JCenterV( new JLabel("dummy placeholder V-centered"))));//TODO TO REMOVE
+		add((new JCenter( new JLabel("dummy placeholder centered"))));//TODO TO REMOVE
+
 		geometry();
 		control();
 		appearance();
