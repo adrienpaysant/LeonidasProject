@@ -1,26 +1,22 @@
-package fr.utbm.ri50.leonidas.views.components;
+package fr.utbm.ri50.leonidas.tools.layout;
 
 import javax.swing.Box;
 import javax.swing.BoxLayout;
-import javax.swing.JLabel;
+import javax.swing.JComponent;
 
-import fr.utbm.ri50.leonidas.tools.layout.JCenterV;
-
-public class MainContener extends Box
+public class JCenterV extends Box
 	{
 
 	/*------------------------------------------------------------------*\
 	|*							Constructeurs							*|
 	\*------------------------------------------------------------------*/
 
-	public MainContener()
+	public JCenterV(JComponent comp)
 		{
-
 		super(BoxLayout.Y_AXIS);
-		add(new JCenterV( new JLabel("toto")));//TODO TO REMOVE
-		geometry();
-		control();
-		appearance();
+		add(createVerticalGlue());
+		add(comp);
+		add(createVerticalGlue());
 		}
 
 	/*------------------------------------------------------------------*\
@@ -35,20 +31,7 @@ public class MainContener extends Box
 	|*							Methodes Private						*|
 	\*------------------------------------------------------------------*/
 
-	private void geometry()
-		{
-		// TODO
-		}
 
-	private void control()
-		{
-		// rien
-		}
-
-	private void appearance()
-		{
-		// rien
-		}
 
 	/*------------------------------------------------------------------*\
 	|*							Attributs Private						*|
