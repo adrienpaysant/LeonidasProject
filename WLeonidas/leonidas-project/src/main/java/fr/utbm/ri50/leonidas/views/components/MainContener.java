@@ -1,20 +1,21 @@
-package fr.utbm.ri50.leonidas.views.main;
+package fr.utbm.ri50.leonidas.views.components;
 
-import java.awt.BorderLayout;
+import javax.swing.Box;
+import javax.swing.BoxLayout;
+import javax.swing.JLabel;
 
-import javax.swing.JFrame;
-
-import fr.utbm.ri50.leonidas.views.components.MainContener;
-
-public class LeonidasFrame extends JFrame
+public class MainContener extends Box
 	{
 
 	/*------------------------------------------------------------------*\
 	|*							Constructeurs							*|
 	\*------------------------------------------------------------------*/
 
-	public LeonidasFrame()
+	public MainContener()
 		{
+
+		super(BoxLayout.Y_AXIS);
+		add(new JLabel("toto"));//TODO TO REMOVE
 		geometry();
 		control();
 		appearance();
@@ -34,23 +35,17 @@ public class LeonidasFrame extends JFrame
 
 	private void geometry()
 		{
-		BorderLayout borderLayout = new BorderLayout();
-		setLayout(borderLayout);
-
-		add(new MainContener(),BorderLayout.CENTER);
+		// TODO
 		}
 
 	private void control()
 		{
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		// rien
 		}
 
 	private void appearance()
 		{
-		setTitle("Leonidas");
-		setSize(600, 400);
-		setLocationRelativeTo(null); // frame centrer
-		setVisible(true); // last!
+		// rien
 		}
 
 	/*------------------------------------------------------------------*\
