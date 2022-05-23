@@ -1,52 +1,56 @@
-# C++ objects and libs
-*.slo
-*.lo
-*.o
-*.a
-*.la
-*.lai
-*.so
-*.so.*
-*.dll
-*.dylib
+#
+# Project specific excludes
+#
 
-# Qt-es
-object_script.*.Release
-object_script.*.Debug
-*_plugin_import.cpp
-/.qmake.cache
-/.qmake.stash
-*.pro.user
-*.pro.user.*
-*.qbs.user
-*.qbs.user.*
-*.moc
-moc_*.cpp
-moc_*.h
-qrc_*.cpp
-ui_*.h
-*.qmlc
-*.jsc
-Makefile*
-*build-*
-*.qm
-*.prl
+tomcat
 
-# Qt unit tests
-target_wrapper.*
+#
+# Default excludes
+#
 
-# QtCreator
-*.autosave
+# Binaries
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+*.war
+*.ear
+*.sar
+*.class
 
-# QtCreator Qml
-*.qmlproject.user
-*.qmlproject.user.*
+# Maven 
+target/
 
-# QtCreator CMake
-CMakeLists.txt.user*
+# IntelliJ project files 
+*.iml
+*.iws
+*.ipr
+.idea/
 
-# QtCreator 4.8< compilation database 
-compile_commands.json
+# eclipse project file
+.settings/
+.classpath
+.project
 
-# QtCreator local machine specific files for imported projects
-*creator.user*
+# NetBeans specific
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+
+# OS
+.DS_Store
+
+# Misc
+*.swp
+release.properties
+pom.xml.releaseBackup
+pom.xml.tag
