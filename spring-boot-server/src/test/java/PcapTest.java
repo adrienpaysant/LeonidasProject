@@ -13,7 +13,7 @@ public class PcapTest {
     private static final int COUNT = 5;
 
     private static final String PCAP_FILE_KEY = "tcpdump.pcapFile";
-    private static final String PCAP_FILE = "D:\\project\\spring-boot-react-mysql\\spring-boot-server\\src\\main\\resources\\test.pcap";
+    private static final String PCAP_FILE = "D:\\project\\spring-boot-react-mysql\\spring-boot-server\\src\\main\\resources\\tcpdump.pcap";
     private static final String PCAP_FILE_1 =
             System.getProperty(PCAP_FILE_KEY,
                     "D:\\project\\spring-boot-react-mysql\\spring-boot-server\\src\\main\\resources\\tcpdump.pcap");
