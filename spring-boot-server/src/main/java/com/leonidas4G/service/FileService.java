@@ -17,12 +17,12 @@ import java.util.concurrent.TimeoutException;
 @Slf4j
 public class FileService {
 
-    public void handlePcap(String pcapFile) throws PcapNativeException, NotOpenException {
+    public void handlePcap(String pcapFilePath) throws PcapNativeException, NotOpenException {
         PcapHandle handle;
         try {
-            handle = Pcaps.openOffline(pcapFile);
+            handle = Pcaps.openOffline(pcapFilePath);
         } catch (PcapNativeException e) {
-            handle = Pcaps.openOffline(pcapFile);
+            handle = Pcaps.openOffline(pcapFilePath);
         }
 
         for (int i = 0; i < 10; i++) {

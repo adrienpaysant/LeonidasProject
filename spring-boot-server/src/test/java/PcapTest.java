@@ -6,6 +6,8 @@ import org.pcap4j.packet.Packet;
 
 import java.io.EOFException;
 import java.util.concurrent.TimeoutException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 @SuppressWarnings("javadoc")
 public class PcapTest {
@@ -22,26 +24,21 @@ public class PcapTest {
     }
 
     public static void main(String[] args) throws PcapNativeException, NotOpenException {
-        PcapHandle handle;
-        try {
-            handle = Pcaps.openOffline(PCAP_FILE);
-        } catch (PcapNativeException e) {
-            handle = Pcaps.openOffline(PCAP_FILE);
-        }
+        String line = "Frame 1: 51 bytes on wire (408 bits), 51 bytes captured (408 bits)";
+        String pattern = "(Frame )(\\d+)(: )(\\d+)(\\D*)(\\d+)(.*)";
 
-        for (int i = 0; i < COUNT; i++) {
-            try {
-                Packet packet = handle.getNextPacketEx();
-                System.out.println(handle.getTimestamp());
-                System.out.println(packet);
-                System.out.println(handle);
-            } catch (TimeoutException e) {
-            } catch (EOFException e) {
-                System.out.println("EOF");
-                break;
-            }
-        }
+        // 创建 Pattern 对象
+        Pattern r = Pattern.compile(pattern);
 
-        handle.close();
+        // 现在创建 matcher 对象
+        Matcher m = r.matcher(line);
+        if (m.find( )) {
+            System.out.println("Found value: " + m.group(0) );
+            System.out.println("Found value: " + m.group(2) );
+            System.out.println("Found value: " + m.group(6) );
+//            System.out.println("Found value: " + m.group(3) );
+        } else {
+            System.out.println("NO MATCH");
+        }
     }
 }
