@@ -12,7 +12,7 @@ class App extends Component {
       <div>
         <nav className="navbar navbar-expand navbar-dark bg-dark">
           <Link to={"/"} className="navbar-brand">
-            4G
+            4G Analyzer
           </Link>
           <div className="navbar-nav mr-auto">
             <li>

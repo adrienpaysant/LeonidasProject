@@ -32,4 +32,9 @@ public class PacketServiceImpl implements PacketService{
     public List<Packet> findAll() {
         return packetRepository.findAll();
     }
+
+    @Override
+    public void deleteAllPrbs() {
+        packetRepository.deleteAll();
+    }
 }

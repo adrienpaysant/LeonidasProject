@@ -46,7 +46,6 @@ public class Packet {
     private String channel;
 
     public Packet(Integer indice, String temps, String protocol, Integer captureSize, String src, String dst, String mcc, String mnc, String channel) {
-        this.id = id;
         this.indice = indice;
         this.temps = temps;
         this.protocol = protocol;

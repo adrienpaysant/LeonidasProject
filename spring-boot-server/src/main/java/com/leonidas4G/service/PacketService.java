@@ -12,4 +12,6 @@ public interface PacketService {
     void deleteAll();
 
     List<Packet> findAll();
+
+    void deleteAllPrbs();
 }
