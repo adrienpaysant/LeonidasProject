@@ -74,7 +74,7 @@ public class PcapService {
                     }
                 }
                 if (line.contains("Arrival Time:")) {
-                    pattern = "(Arrival Time: )(.*?)( 罗马标准时间)";
+                    pattern = "(Arrival Time: )(.*?)( 罗马)(.*)";
                     Pattern r = Pattern.compile(pattern);
                     Matcher m = r.matcher(line);
                     if (m.find()) {
@@ -128,7 +128,8 @@ public class PcapService {
             }
 
             if (protocol != null) {
-                if (protocol.startsWith("GSM"))
+                if (protocol.startsWith("GSM") ||
+                    protocol.startsWith("Non-Access-Stratum"))
                     protocol = "GSM";
                 else if (protocol.startsWith("LTE"))
                     protocol = "LTE";
@@ -136,7 +137,8 @@ public class PcapService {
                         protocol.trim().equals("UL-CCCH-Message") ||
                         protocol.trim().equals("DL-CCCH-Message") ||
                         protocol.trim().equals("UL-DCCH-Message") ||
-                        protocol.trim().equals("DL-DCCH-Message"))
+                        protocol.trim().equals("DL-DCCH-Message") ||
+                        protocol.trim().equals("PCCH-Message"))
                     protocol = "RRC";
                 if (!hashSet.contains(protocol)) {
                     hashSet.add(protocol.trim());

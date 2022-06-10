@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { InboxOutlined } from '@ant-design/icons';
 import { Scatter } from '@ant-design/plots';
-import { Descriptions, message, Upload } from 'antd';
+import { Button, Col, Descriptions, message, Row, Upload } from 'antd';
 import pcapService from "../services/pcap.service";
 const { Dragger } = Upload;
 
@@ -10,6 +10,7 @@ export default class TestEx extends Component {
     super(props);
     this.onChange = this.onChange.bind(this);
     this.onDrop = this.onDrop.bind(this);
+    this.reload = this.reload.bind(this);
 
     this.state = {
       submitted: false,
@@ -68,8 +69,29 @@ export default class TestEx extends Component {
       pcapService.getAll()
         .then((response) => {
           if (response.data !== []) {
+            let packets = response.data;
+            let mcc = null;
+            let mnc = null;
+            let date = null;
+
+            for (let index = 0; index < packets.length; index++) {
+              let packet = packets[index];
+              if (packet.mcc !== '')
+                mcc = packet.mcc;
+              if (packet.mnc !== '')
+                mnc = packet.mnc;
+              if (mcc !== null && mnc !== null) {
+                date = packet.date;
+                break;
+              }
+            }
+            console.log("exists data: " + mcc);
             this.setState({
               packet_list: response.data,
+              submitted: true,
+              mcc: mcc,
+              mnc: mnc,
+              date: date,
             });
           }
         })
@@ -89,6 +111,14 @@ export default class TestEx extends Component {
     console.log('Dropped files', e.dataTransfer.files);
   }
 
+  reload = () => {
+    pcapService.deleteAll();
+    this.setState({
+      submitted:false,
+    })
+    window.location.reload();
+  }
+
 
   render() {
     return (
@@ -96,12 +126,21 @@ export default class TestEx extends Component {
         {this.state.submitted ?
           (
             <div>
-              <Descriptions size="small" bordered>
-                <Descriptions.Item label="Date">{this.state.date}</Descriptions.Item>
-                <Descriptions.Item label="MCC">{this.state.mnc}</Descriptions.Item>
-                <Descriptions.Item label="MNC">{this.state.mnc}</Descriptions.Item>
-              </Descriptions>
-              <br/>
+              <Row justify="space-between" align="middle">
+                <Col span={18}>
+                  <Descriptions size="small" bordered>
+                    <Descriptions.Item label="Date">{this.state.date}</Descriptions.Item>
+                    <Descriptions.Item label="MCC">{this.state.mcc}</Descriptions.Item>
+                    <Descriptions.Item label="MNC">{this.state.mnc}</Descriptions.Item>
+                  </Descriptions>
+                </Col>
+                <Col span={2}>
+                  <Button type="primary" size="middle" onClick={this.reload} danger>
+                    Restart
+                  </Button>
+                </Col>
+              </Row>
+              <br />
               <Scatter
                 data={this.state.packet_list}
                 padding="auto"

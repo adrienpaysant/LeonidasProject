@@ -22,7 +22,7 @@ class PcapDataService {
 //   }
 
   deleteAll() {
-    return http.delete(`/pcapData`);
+    return http.delete(`/packetData`);
   }
 
 //   findByTitle(title) {
