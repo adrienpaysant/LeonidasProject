@@ -44,9 +44,8 @@ public class PcapService {
             }
 
             // Read command errors
-            System.out.println("Standard error: ");
             while ((s = stdError.readLine()) != null) {
-                System.out.println(s);
+                System.out.println("Standard error: " + s);
             }
         } catch (Exception e) {
             e.printStackTrace(System.err);
@@ -142,7 +141,6 @@ public class PcapService {
                     protocol = "RRC";
                 if (!hashSet.contains(protocol)) {
                     hashSet.add(protocol.trim());
-                    System.out.println(protocol);
                 }
             }
 
