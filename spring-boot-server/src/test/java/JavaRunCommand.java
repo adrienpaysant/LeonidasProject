@@ -24,7 +24,7 @@ public class JavaRunCommand {
 //        List<String> lteList = pcapService.parsePcap(location_file);
 //        List<Packet> packetList = pcapService.transfer2Pojo(lteList);
 //        System.out.println(packetList.toString());
-
+//
 //        try {
 //            // Run "netsh" Windows command
 //            Process process = Runtime.getRuntime().exec(cmd);
@@ -35,7 +35,7 @@ public class JavaRunCommand {
 //
 //            // Read command standard output
 //            String s;
-//            List<String> lteList = new ArrayList<>();
+//            lteList = new ArrayList<>();
 //            StringBuilder stringBlock = new StringBuilder();
 //            while ((s = stdInput.readLine()) != null) {
 //                if (s.contains("bytes on wire")) {

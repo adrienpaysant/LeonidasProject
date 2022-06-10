@@ -3,7 +3,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import React, { Component } from "react";
 import { Link, Route, Switch } from "react-router-dom";
 import "./App.css";
-import TestEx from "./components/test.component";
+import TestEx from "./components/pcap.component";
+import { DemoLine } from "./components/line.component";
 
 
 class App extends Component {
@@ -26,7 +27,7 @@ class App extends Component {
         <div className="container mt-3">
           <Switch>
             <Route exact path={["/"]} component={TestEx} />
-            <Route exact path="/test" component={TestEx} />
+            <Route exact path="/test" render={() => <div><DemoLine /></div>} />
           </Switch>
         </div>
       </div>

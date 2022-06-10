@@ -7,8 +7,9 @@ import org.springframework.stereotype.Service;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.List;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -35,9 +36,7 @@ public class PcapService {
             while ((s = stdInput.readLine()) != null) {
                 if (s.contains("bytes on wire")) {
                     String block = stringBlock.toString();
-                    if (block.contains("LTE")) {
-                        lteList.add(block);
-                    }
+                    lteList.add(block);
                     stringBlock.delete(0, stringBlock.length());
                 }
                 stringBlock.append(s);
@@ -57,11 +56,13 @@ public class PcapService {
 
     public List<Packet> transfer2Pojo(List<String> pcapList) {
         List<Packet> packets = new ArrayList<>();
+        HashSet<String> hashSet = new HashSet<>();
         for (String block : pcapList) {
             String[] lines = block.split("\n");
             String pattern, protocol = null, src = null, dst = null, mcc = null,
-                    mnc = null, channel = null, time = null;
-            int index = 0, length = 0;
+                    mnc = null, channel = null, timeStr, date = null, time = null;
+            Date timeDetail = null;
+            int index = 0, length = 0, protocol_line = 0;
             for (String line : lines) {
                 if (line.contains("bytes on wire")) {
                     pattern = "(Frame )(\\d+)(: )(\\d+)(\\D*)(\\d+)(.*)";
@@ -76,8 +77,20 @@ public class PcapService {
                     pattern = "(Arrival Time: )(.*?)( 罗马标准时间)";
                     Pattern r = Pattern.compile(pattern);
                     Matcher m = r.matcher(line);
-                    if (m.find())
-                        time = m.group(2);
+                    if (m.find()) {
+                        timeStr = m.group(2);
+                        timeStr = timeStr.substring(0, timeStr.length() - 6);
+                        SimpleDateFormat parseString = new SimpleDateFormat("MMM dd, yyyy HH:mm:ss.S", Locale.ENGLISH);
+                        try {
+                            timeDetail = parseString.parse(timeStr);
+                        } catch (ParseException e) {
+                            e.printStackTrace();
+                        }
+                        SimpleDateFormat formatTime = new SimpleDateFormat("HH:mm:ss.S", Locale.ENGLISH);
+                        time = formatTime.format(timeDetail);
+                        SimpleDateFormat formatDate = new SimpleDateFormat("MM-dd-yyyy", Locale.ENGLISH);
+                        date = formatDate.format(timeDetail);
+                    }
                 }
                 if (line.contains("Src:")) {
                     pattern = "(.*?Src: )(.*)(, Dst: )(.*)";
@@ -95,7 +108,7 @@ public class PcapService {
                     if (m.find())
                         channel = m.group(2);
                 }
-                if (line.contains("LTE")) {
+                if (line.length() > 0 && line.charAt(0) != ' ') {
                     protocol = line;
                 }
                 if (line.contains("Mobile Country Code (MCC): ")) {
@@ -113,7 +126,25 @@ public class PcapService {
                         mnc = m.group(2);
                 }
             }
-            Packet packet = packetService.create(protocol, src, dst, mcc, mnc, channel, time, index, length);
+
+            if (protocol != null) {
+                if (protocol.startsWith("GSM"))
+                    protocol = "GSM";
+                else if (protocol.startsWith("LTE"))
+                    protocol = "LTE";
+                else if (protocol.trim().equals("BCCH-BCH-Message") ||
+                        protocol.trim().equals("UL-CCCH-Message") ||
+                        protocol.trim().equals("DL-CCCH-Message") ||
+                        protocol.trim().equals("UL-DCCH-Message") ||
+                        protocol.trim().equals("DL-DCCH-Message"))
+                    protocol = "RRC";
+                if (!hashSet.contains(protocol)) {
+                    hashSet.add(protocol.trim());
+                    System.out.println(protocol);
+                }
+            }
+
+            Packet packet = packetService.create(protocol, src, dst, mcc, mnc, channel, timeDetail, index, length, time, date);
 //            Packet packet = new Packet(index, time, protocol, length, src, dst, mcc, mnc, channel);
             packets.add(packet);
         }

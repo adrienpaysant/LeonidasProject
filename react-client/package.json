@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@ant-design/charts": "^1.3.6",
     "@babel/runtime": "^7.17.9",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -18,7 +19,6 @@
     "stompjs": "^2.3.3",
     "web-vitals": "^2.1.2"
   },
-
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

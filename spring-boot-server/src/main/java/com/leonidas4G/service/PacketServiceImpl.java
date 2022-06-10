@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -17,8 +18,10 @@ public class PacketServiceImpl implements PacketService{
     private final PacketRepository packetRepository;
 
     @Override
-    public Packet create(String protocol, String src, String dst, String mcc, String mnc, String channel, String time, int index, int length) {
-        Packet tempPacket = new Packet(index, time, protocol, length, src, dst, mcc, mnc, channel);
+    public Packet create(String protocol, String src, String dst, String mcc,
+                         String mnc, String channel, Date timeDetail,
+                         int index, int length, String time, String date) {
+        Packet tempPacket = new Packet(index, timeDetail, protocol, length, src, dst, mcc, mnc, channel, time, date);
         packetRepository.save(tempPacket);
         return tempPacket;
     }

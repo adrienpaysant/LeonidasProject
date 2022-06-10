@@ -3,6 +3,7 @@ package com.leonidas4G.model;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.Objects;
 
 @Entity
@@ -22,7 +23,13 @@ public class Packet {
     private Integer indice;
 
     @Column(name = "temps")
-    private String temps;
+    private Date temps;
+
+    @Column(name = "time")
+    private String time;
+
+    @Column(name = "date")
+    private String date;
 
     @Column(name = "protocol")
     private String protocol;
@@ -45,9 +52,13 @@ public class Packet {
     @Column(name = "channel")
     private String channel;
 
-    public Packet(Integer indice, String temps, String protocol, Integer captureSize, String src, String dst, String mcc, String mnc, String channel) {
+    public Packet(Integer indice, Date temps, String protocol, Integer captureSize,
+                  String src, String dst, String mcc, String mnc, String channel,
+                  String time, String date) {
         this.indice = indice;
         this.temps = temps;
+        this.time = time;
+        this.date = date;
         this.protocol = protocol;
         this.captureSize = captureSize;
         this.src = src;
