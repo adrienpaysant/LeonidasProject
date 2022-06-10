@@ -1,6 +1,7 @@
 HELP.md
 target/
-src/test/
+/src/test/
+/src/main/resources/ri50.pcap
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/

@@ -27,7 +27,7 @@ public class PcapController {
         File f;
         assert original_name != null;
         if (original_name.endsWith(".pcap") || original_name.endsWith(".pcapng")) {
-            f = new File("D:\\Desktop\\ri50.pcap");
+            f = new File("D:\\project\\leonidas4G\\spring-boot-server\\src\\main\\resources\\ri50.pcap");
             file.transferTo(f);
             List<String> pcapList = pcapService.parsePcap(f.getAbsolutePath());
             List<Packet> packets = pcapService.transfer2Pojo(pcapList);
