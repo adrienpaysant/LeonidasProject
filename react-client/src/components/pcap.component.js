@@ -141,6 +141,7 @@ export default class TestEx extends Component {
                 </Col>
               </Row>
               <br />
+              <br />
               <Scatter
                 data={this.state.packet_list}
                 padding="auto"

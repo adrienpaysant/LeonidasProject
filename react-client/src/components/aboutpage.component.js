@@ -25,7 +25,7 @@ class About extends Component {
             <Title level={3}>What is 4G analyzer</Title>
             <Paragraph>
               <Text>
-                4G analyzer is a website that .....
+                4G analyzer is a website that analyze 4G signal. For more info please read &nbsp;
                 <a target='_blank' rel='noopener noreferrer' href='https://github.com/adrienpaysant/LeonidasProject#readme'>
                   README page
                 </a>.
@@ -34,7 +34,9 @@ class About extends Component {
             <Title level={3}>How does this work?</Title>
             <Paragraph>
               <Text>
-                xxxxx<br />
+                First of all, the android phone receives 4G signal and send it to the server as the form of pcapfile.<br/>
+                Secondly, the server run tshark.exe to analyse pcapfile. <br/>
+                Lastly, show the result with graph by the help of frontend framework React.
               </Text>
             </Paragraph>
             <Title level={3}>Contributing</Title>
