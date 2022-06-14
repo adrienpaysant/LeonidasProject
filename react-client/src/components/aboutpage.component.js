@@ -66,7 +66,7 @@ class About extends Component {
             <Paragraph>
               <ul>
                 <li>
-                The website still has room for improvement, please send all your comments to <a href="mailto:yu.li@utbm.fr">yu.li@utbm.fr</a> for any purposes.
+                The website is in the process of constuction, please send all your comments to <a href="mailto:yu.li@utbm.fr">yu.li@utbm.fr</a> for any purposes.
                 </li>
                 <li>
                   <a target='_blank' rel='noopener noreferrer' href="https://teams.microsoft.com/_#/conversations/19:fb90dd7044fa46f0804a4ec397480894@thread.v2?ctx=chat">
