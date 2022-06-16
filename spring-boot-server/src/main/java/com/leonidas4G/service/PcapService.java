@@ -25,7 +25,7 @@ public class PcapService {
         List<String> lteList = new ArrayList<>();
 
         try {
-            // Run "netsh" Windows command
+            // Run in Windows command
             Process process = Runtime.getRuntime().exec(cmd);
             // Get input streams
             BufferedReader stdInput = new BufferedReader(new InputStreamReader(process.getInputStream()));
