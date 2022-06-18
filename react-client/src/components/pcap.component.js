@@ -21,40 +21,7 @@ export default class TestEx extends Component {
     };
   }
 
-  componentDidMount = () => {
-    pcapService.getAll()
-      .then((response) => {
-        if (response.data !== '') {
-          let packets = response.data;
-          let mcc = null;
-          let mnc = null;
-          let date = null;
-
-          for (let index = 0; index < packets.length; index++) {
-            let packet = packets[index];
-            if (packet.mcc !== '')
-              mcc = packet.mcc;
-            if (packet.mnc !== '')
-              mnc = packet.mnc;
-            if (mcc !== null && mnc !== null) {
-              date = packet.date;
-              break;
-            }
-          }
-          console.log("exists data: " + mcc);
-          this.setState({
-            packet_list: response.data,
-            submitted: true,
-            mcc: mcc,
-            mnc: mnc,
-            date: date,
-          });
-        }
-      })
-      .catch((e) => {
-        console.log(e);
-      });
-  }
+  componentDidMount = () => {}
 
   onChange = (info) => {
     const { status } = info.file;
@@ -80,8 +47,10 @@ export default class TestEx extends Component {
                 mcc = packet.mcc;
               if (packet.mnc !== '')
                 mnc = packet.mnc;
-              if (mcc !== null && mnc !== null) {
+              if (packet.date !== '') {
                 date = packet.date;
+              }
+              if (mcc !== null && mnc !== null && date !== null) {
                 break;
               }
             }

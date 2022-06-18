@@ -139,6 +139,9 @@ public class PcapService {
                         protocol.trim().equals("DL-DCCH-Message") ||
                         protocol.trim().equals("PCCH-Message"))
                     protocol = "RRC";
+                else {
+                    System.out.println("other protocol" + protocol);
+                }
                 if (!hashSet.contains(protocol)) {
                     hashSet.add(protocol.trim());
                 }
